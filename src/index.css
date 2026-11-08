@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-navy-900 antialiased;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-volt-500 ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-volt-500 px-6 py-3.5 text-base font-bold text-navy-900 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-volt-400 hover:shadow-md active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/80 px-6 py-3.5 text-base font-bold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-navy-900 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-navy-700 px-6 py-3 text-base font-bold text-navy-700 transition duration-200 hover:bg-navy-700 hover:text-white;
+  }
+
+  .eyebrow {
+    @apply text-sm font-bold uppercase tracking-[0.14em] text-navy-600;
+  }
+
+  .card-lift {
+    @apply transition duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+}
