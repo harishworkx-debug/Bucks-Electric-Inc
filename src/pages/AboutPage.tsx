@@ -35,9 +35,9 @@ const APPROACH = [
 
 export function AboutPage() {
   useSeo({
-    title: "About Buck's Electric Inc | Electrical Contractor in Rapid City, SD",
+    title: 'About Bucks Electric | Electrical Contractor in Rapid City, SD',
     description:
-      "Learn about Buck's Electric Inc, an electrical contractor at 1720A Samco Rd in Rapid City, SD. Our values, approach, and contact details.",
+      'Meet Bucks Electric, your local electrical contractor based at 1720A Samco Rd in Rapid City, SD. Learn about our values, master electrician standards, and community dedication.',
     path: '/about-us',
     jsonLd: [
       breadcrumbSchema([
@@ -50,9 +50,9 @@ export function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Us"
-        title="About Buck's Electric Inc"
-        description="Buck's Electric Inc is an electrical contractor based in Rapid City, South Dakota, providing electrical repair, installation, wiring, panel upgrades, and lighting for the community."
+        eyebrow="About Bucks Electric"
+        title="Meet Bucks Electric – Your Rapid City Electrical Contractor"
+        description="Bucks Electric is an established electrical contractor based in Rapid City, South Dakota, delivering dependable repairs, 200A panel upgrades, rewiring, and commercial contracting."
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'About Us', path: '/about-us' },
@@ -140,15 +140,26 @@ export function AboutPage() {
                 <dd className="mt-1 inline-flex items-center gap-2 text-lg font-semibold text-navy-900">
                   <BadgeCheck className="h-5 w-5 text-navy-600" aria-hidden="true" />
                   <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-volt-500 decoration-2 underline-offset-4 hover:text-navy-600">
-                    View on Google Maps
+                    4.8 ★ on Google Maps (9 reviews)
                   </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-bold uppercase tracking-[0.12em] text-navy-600">Contractor Verification</dt>
+                <dd className="mt-1 text-sm font-semibold text-navy-900 leading-normal">
+                  BuildZoom verified local contractor footprint at 1720A Samco Rd, Rapid City, SD.
                 </dd>
               </div>
             </dl>
           </div>
-          <Link to="/electrical-services" className="btn-outline self-start">
-            Explore electrical services
-          </Link>
+          <div className="flex flex-col gap-3 self-start sm:flex-row">
+            <Link to="/electrical-services" className="btn-outline">
+              Explore electrical services
+            </Link>
+            <Link to="/service-areas" className="btn-secondary">
+              View Black Hills service areas
+            </Link>
+          </div>
         </div>
       </Section>
 

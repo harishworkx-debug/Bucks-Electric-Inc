@@ -3,11 +3,14 @@ import {
   AlertTriangle,
   ArrowRight,
   BadgeCheck,
+  BookOpen,
   Building2,
   Cable,
   CheckCircle2,
   ChevronRight,
   Clock,
+  CreditCard,
+  DollarSign,
   ExternalLink,
   FileCheck,
   Home,
@@ -33,11 +36,13 @@ import { Section, SectionHeading } from '@/components/SectionHeading';
 import { ServiceCard } from '@/components/ServiceCard';
 import { Link } from '@/lib/router';
 import { useSeo } from '@/lib/seo';
-import { localBusinessSchema, websiteSchema } from '@/lib/schema';
+import { localBusinessSchema, organizationSchema, websiteSchema, faqPageSchema } from '@/lib/schema';
 import { SITE } from '@/lib/site';
 import { SERVICES } from '@/data/services';
 import { SERVICE_AREAS } from '@/data/areas';
 import { GOOGLE_REVIEWS, GOOGLE_REVIEWS_SUMMARY, type Review } from '@/data/reviews';
+import { HOME_FAQS } from '@/data/faqs';
+import { ELECTRICAL_GUIDES } from '@/data/guides';
 
 const TRUST_METRICS = [
   {
@@ -127,6 +132,7 @@ const SOLUTIONS_TABS = [
     ],
     slug: 'electrical-panel-upgrade-rapid-city-sd',
     image: 'https://images.pexels.com/photos/28950842/pexels-photo-28950842.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Electrical panel installation by Bucks Electric in Rapid City SD',
   },
   {
     id: 'ev',
@@ -143,6 +149,7 @@ const SOLUTIONS_TABS = [
     ],
     slug: 'ev-charger-installation-rapid-city-sd',
     image: 'https://images.pexels.com/photos/27355831/pexels-photo-27355831.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Electric vehicle charging station installation',
   },
   {
     id: 'lighting',
@@ -159,6 +166,7 @@ const SOLUTIONS_TABS = [
     ],
     slug: 'lighting-installation-rapid-city-sd',
     image: 'https://images.pexels.com/photos/1253128/pexels-photo-1253128.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Professional lighting installation in Rapid City SD',
   },
   {
     id: 'commercial',
@@ -175,6 +183,7 @@ const SOLUTIONS_TABS = [
     ],
     slug: 'commercial-electrician-rapid-city-sd',
     image: 'https://images.pexels.com/photos/7285965/pexels-photo-7285965.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Commercial electrical contractor project in Rapid City SD',
   },
   {
     id: 'repair',
@@ -191,6 +200,7 @@ const SOLUTIONS_TABS = [
     ],
     slug: 'electrical-repair-rapid-city-sd',
     image: 'https://images.pexels.com/photos/17924298/pexels-photo-17924298.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Electrical wiring work for a Rapid City property',
   },
 ];
 
@@ -203,6 +213,7 @@ const FEATURED_PROJECTS = [
       'Completed comprehensive electrical infrastructure for a local showroom including custom track lighting, dedicated display power, and panel distribution.',
     outcome: 'Delivered on schedule with high praise from business owners for craftsmanship and clean finish.',
     image: 'https://images.pexels.com/photos/7285965/pexels-photo-7285965.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Commercial electrical contractor project in Rapid City SD',
   },
   {
     title: '200-Amp Main Service Panel Modernization',
@@ -212,6 +223,7 @@ const FEATURED_PROJECTS = [
       'Replaced a hazardous 100-amp split-bus fuse panel with a high-capacity 200A 40-circuit panel, dual copper ground rods, and whole-home surge protector.',
     outcome: 'Eliminated nuisance tripping, passed city inspection seamlessly, and prepared the home for heat pump heating.',
     image: 'https://images.pexels.com/photos/28950842/pexels-photo-28950842.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Electrical panel installation by Bucks Electric in Rapid City SD',
   },
   {
     title: 'Full Basement Rewiring & Safety Upgrades',
@@ -221,6 +233,7 @@ const FEATURED_PROJECTS = [
       'Engineered and rewired an entire basement with modern Arc-Fault (AFCI) and GFCI protected branch circuits, recessed lighting, and dedicated outlets.',
     outcome: 'Turned a dark, hazardous basement into a safe, modern, and code-compliant living area.',
     image: 'https://images.pexels.com/photos/17924298/pexels-photo-17924298.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Electrical wiring work for a Rapid City property',
   },
   {
     title: 'Dual Level 2 EV Charging Station Installation',
@@ -230,6 +243,7 @@ const FEATURED_PROJECTS = [
       'Engineered and installed dedicated 60A and 50A branch circuits in an attached 3-car garage, with industrial EMT conduit and hardwired wall connectors.',
     outcome: 'High-speed overnight charging for household vehicles without overloading existing electrical circuits.',
     image: 'https://images.pexels.com/photos/27355831/pexels-photo-27355831.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageAlt: 'Electric vehicle charging station installation',
   },
 ];
 
@@ -306,56 +320,13 @@ const SAFETY_TIPS = [
   },
 ];
 
-const HOME_FAQS = [
-  {
-    question: "What electrical services does Buck's Electric Inc offer in Rapid City?",
-    answer:
-      "We provide complete electrical repair, 200-amp panel upgrades, whole-home wiring and rewiring, Level 2 EV charger installation, commercial electrical buildouts, recessed LED lighting, outlet and switch repairs, and electrical troubleshooting across Rapid City and the Black Hills.",
-  },
-  {
-    question: 'How do I know if my electrical panel needs an upgrade?',
-    answer:
-      'Common signs include frequent breaker tripping, flickering lights when appliances kick on, an older fuse box or split-bus panel, rust or corrosion inside the box, or planning additions like a hot tub, central heat pump, or EV charging station. An upgrade to 200 amps ensures safe, reliable power.',
-  },
-  {
-    question: 'Do you handle both residential homes and commercial businesses?',
-    answer:
-      'Yes. We service both residential properties (homes, townhouses, cabins, and rentals) and commercial facilities (showrooms, offices, retail stores, warehouses, and tenant buildouts) with dedicated equipment circuits, 3-phase power distribution, and code-compliant installations.',
-  },
-  {
-    question: 'Do you pull permits with the South Dakota Electrical Commission?',
-    answer:
-      'Yes. For work requiring permits—such as panel upgrades, service replacements, new circuits, and commercial buildouts—we pull the appropriate state and local permits and coordinate the final inspection so your property remains fully insured and code-compliant.',
-  },
-  {
-    question: 'Can you install a Level 2 EV charger in my garage?',
-    answer:
-      'Yes. We install dedicated 240V 40A to 60A circuits for Level 2 EV charging stations. We perform electrical load calculations to ensure your main panel can handle the charging load and install hardwired wall units or NEMA 14-50 receptacles for Tesla and all EV brands.',
-  },
-  {
-    question: 'How quickly can an electrician arrive in Rapid City?',
-    answer:
-      `Our office is located right at 1720A Samco Rd in Rapid City, SD. For scheduled work, we offer prompt appointment windows. If you have an urgent electrical issue such as total power loss or a burning smell, call ${SITE.phoneDisplay} immediately for priority guidance.`,
-  },
-  {
-    question: 'What should I do if I smell burning or see sparks from an outlet or panel?',
-    answer:
-      `Immediately switch off the breaker controlling that circuit if it is safe to do so. If you cannot identify the breaker or the panel is sparking, shut down the main breaker or contact the utility company. Keep people away and call Buck's Electric at ${SITE.phoneDisplay} right away.`,
-  },
-  {
-    question: 'Do you provide upfront pricing or estimates?',
-    answer:
-      'Yes. We believe in honest, transparent pricing. When you call us, we discuss the scope of your project, evaluate on-site requirements, and provide straightforward options before work begins so you never encounter surprise hidden charges.',
-  },
-];
-
 export function HomePage() {
   useSeo({
-    title: "Buck's Electric Inc | Rapid City, SD Electrical Contractor",
+    title: 'Bucks Electric | Electrician in Rapid City, SD',
     description:
-      "Buck's Electric Inc has a 4.8-star Google rating. We provide electrical repairs, 200A panel upgrades, EV chargers, wiring, lighting, and commercial electrical services in Rapid City, SD. Call (605) 343-5630.",
+      'Looking for an experienced electrician in Rapid City, SD? Contact Bucks Electric for professional electrical services, installations, repairs and commercial electrical work.',
     path: '/',
-    jsonLd: [localBusinessSchema, websiteSchema],
+    jsonLd: [localBusinessSchema, organizationSchema, websiteSchema, faqPageSchema(HOME_FAQS)],
   });
 
   const [activeTab, setActiveTab] = useState(SOLUTIONS_TABS[0].id);
@@ -408,10 +379,10 @@ export function HomePage() {
       <section className="relative isolate overflow-hidden bg-navy-900 text-white">
         <img
           src={SITE.heroImage}
-          alt="Electrician working on an indoor circuit breaker panel"
+          alt="Electrical panel installation by Bucks Electric in Rapid City SD"
           width={940}
           height={650}
-          fetchPriority="high"
+          fetchpriority="high"
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/60" />
@@ -422,11 +393,10 @@ export function HomePage() {
               Licensed Electrical Contractor • Rapid City & Black Hills
             </div>
             <h1 className="text-4xl leading-[1.12] sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              Dependable Electrical Services in Rapid City, SD
+              Trusted Electrical Contractor in Rapid City, South Dakota
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-navy-100 sm:text-xl">
-              Buck's Electric Inc holds a <span className="font-bold text-volt-400">4.8-star Google rating</span> across Rapid City.
-              We provide electrical repairs, 200-amp panel upgrades, Level 2 EV chargers, modern lighting, and commercial wiring.
+              Bucks Electric provides electrical contracting services for residential, commercial and light industrial properties in Rapid City, South Dakota, and surrounding Black Hills communities. Whether you are planning an electrical installation, upgrading an existing electrical panel, addressing wiring concerns or working on a commercial property, our team can help you discuss the right electrical solution for your project.
             </p>
             <div className="flex flex-col gap-4 pt-2 sm:flex-row">
               <CallButton label={`Call ${SITE.phoneDisplay}`} className="px-8 py-4 text-lg shadow-lg" />
@@ -599,7 +569,7 @@ export function HomePage() {
               <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-navy-100">
                 <img
                   src={currentTab.image}
-                  alt={currentTab.title}
+                  alt={currentTab.imageAlt || currentTab.title}
                   width={940}
                   height={650}
                   loading="lazy"
@@ -621,8 +591,8 @@ export function HomePage() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow="Our Electrical Services"
-            title="Complete Electrical Solutions for Rapid City Homes & Businesses"
-            description="From minor residential repairs to complex 3-phase commercial installations, we provide licensed, code-compliant electrical work across Pennington County."
+            title="Professional Electrical Services in Rapid City"
+            description="Electrical systems play an important role in the safety and everyday operation of every property. From electrical wiring and lighting installations to troubleshooting and equipment connections, Bucks Electric works with customers to understand their electrical requirements and plan suitable solutions."
           />
           <Link to="/electrical-services" className="btn-outline shrink-0">
             View all 10 electrical services
@@ -638,9 +608,9 @@ export function HomePage() {
       {/* 7. RESIDENTIAL VS COMMERCIAL SPOTLIGHT */}
       <Section tone="muted">
         <SectionHeading
-          eyebrow="Versatile Capabilities"
-          title="Electrical Tailored to Your Property Type"
-          description="Whether you are upgrading an older Rapid City home or powering a commercial facility, we bring the appropriate equipment, certifications, and crew."
+          eyebrow="Targeted Solutions"
+          title="Residential and Commercial Electrical Contractors"
+          description="Every electrical project has different requirements. Residential projects may involve new outlets, wiring improvements, lighting and electrical upgrades. Commercial projects can involve electrical distribution, equipment connections, lighting systems and larger installation requirements."
           centered
         />
 
@@ -776,7 +746,7 @@ export function HomePage() {
               <div className="relative h-60 w-full overflow-hidden bg-navy-900">
                 <img
                   src={proj.image}
-                  alt={proj.title}
+                  alt={proj.imageAlt || proj.title}
                   width={940}
                   height={650}
                   loading="lazy"
@@ -803,8 +773,74 @@ export function HomePage() {
         </div>
       </Section>
 
+      {/* 8B. COMPETITIVE EDGE: FINANCING, PRICING & LOCAL CREDENTIALS */}
+      <Section tone="muted" id="financing">
+        <div className="space-y-12">
+          <SectionHeading
+            eyebrow="Trust, Financing & Standards"
+            title="Honest Pricing, Flexible Financing & Master Electrician Standards"
+            description="Unlike franchises or out-of-state lead generation networks, Buck's Electric Inc is an authentic Rapid City contractor providing transparent pricing, financing options, and code-compliant installations."
+            centered
+          />
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="card-lift rounded-2xl border border-navy-100 bg-white p-7 shadow-xs space-y-4">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-volt-100 text-navy-900">
+                <DollarSign className="h-6 w-6 text-volt-700" />
+              </span>
+              <h3 className="text-lg font-bold text-navy-900">Upfront Honest Pricing</h3>
+              <p className="text-sm leading-relaxed text-navy-700">
+                No hidden travel surcharges across Rapid City metro. We evaluate the job, explain the scope clearly, and provide transparent estimates before any work begins.
+              </p>
+              <div className="text-xs font-semibold text-volt-700 bg-volt-50 rounded-md p-2">
+                ✓ Verified Reasonable Price Ratings on Google
+              </div>
+            </div>
+
+            <div className="card-lift rounded-2xl border border-navy-100 bg-white p-7 shadow-xs space-y-4">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-volt-100 text-navy-900">
+                <CreditCard className="h-6 w-6 text-volt-700" />
+              </span>
+              <h3 className="text-lg font-bold text-navy-900">Financing for Major Upgrades</h3>
+              <p className="text-sm leading-relaxed text-navy-700">
+                Upgrading to a 200A panel, rewiring a home, or installing standby backup generators? We offer flexible payment arrangements and financing assistance.
+              </p>
+              <div className="text-xs font-semibold text-volt-700 bg-volt-50 rounded-md p-2">
+                ✓ Affordable Monthly Options Available
+              </div>
+            </div>
+
+            <div className="card-lift rounded-2xl border border-navy-100 bg-white p-7 shadow-xs space-y-4">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-volt-100 text-navy-900">
+                <ShieldCheck className="h-6 w-6 text-volt-700" />
+              </span>
+              <h3 className="text-lg font-bold text-navy-900">Licensed & $2M Insured</h3>
+              <p className="text-sm leading-relaxed text-navy-700">
+                South Dakota Electrical Commission licensed contractor. We pull all required state permits and ensure 100% compliance with current NEC safety codes.
+              </p>
+              <div className="text-xs font-semibold text-volt-700 bg-volt-50 rounded-md p-2">
+                ✓ Full State Inspection & BuildZoom Verified
+              </div>
+            </div>
+
+            <div className="card-lift rounded-2xl border border-navy-100 bg-white p-7 shadow-xs space-y-4">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-volt-100 text-navy-900">
+                <MapPin className="h-6 w-6 text-volt-700" />
+              </span>
+              <h3 className="text-lg font-bold text-navy-900">Real Local Technicians</h3>
+              <p className="text-sm leading-relaxed text-navy-700">
+                Our shop is at 1720A Samco Rd. You work directly with lead electricians like Dale and Dana—professionals our community knows, trusts, and recommends.
+              </p>
+              <div className="text-xs font-semibold text-volt-700 bg-volt-50 rounded-md p-2">
+                ✓ Rapid City Metro & Black Hills Wide Coverage
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* 9. WHY CHOOSE BUCK'S ELECTRIC */}
-      <Section tone="muted">
+      <Section>
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div className="space-y-10">
             <SectionHeading
@@ -841,7 +877,7 @@ export function HomePage() {
       </Section>
 
       {/* 10. GOOGLE REVIEWS SECTION (MAIN REVIEWS) */}
-      <Section id="reviews">
+      <Section id="reviews" tone="muted">
         <div className="space-y-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
@@ -1235,13 +1271,66 @@ export function HomePage() {
         </div>
       </Section>
 
+      {/* 12B. TOPICAL AUTHORITY: HOMEOWNER & BUSINESS ELECTRICAL GUIDES */}
+      <Section>
+        <SectionHeading
+          eyebrow="Electrical Knowledge Base"
+          title="Homeowner & Business Electrical Guides"
+          description="Helpful, expert-reviewed guides explaining electrical panel upgrade signs, EV charging requirements, wiring safety, and generator planning in the Black Hills."
+        />
+
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {ELECTRICAL_GUIDES.slice(0, 6).map((guide) => (
+            <article
+              key={guide.id}
+              className="card-lift flex flex-col justify-between rounded-2xl border border-navy-100 bg-white p-7 shadow-sm"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between text-xs font-bold">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-volt-500/15 px-3 py-1 text-navy-900">
+                    <BookOpen className="h-3.5 w-3.5 text-volt-600" />
+                    {guide.category}
+                  </span>
+                  <span className="text-navy-500">{guide.readTime}</span>
+                </div>
+
+                <h3 className="text-xl font-bold text-navy-900">{guide.title}</h3>
+                <p className="text-sm leading-relaxed text-navy-700">{guide.summary}</p>
+
+                <div className="space-y-2 border-t border-navy-100 pt-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-navy-500">Key Takeaways:</p>
+                  <ul className="space-y-1.5 text-xs text-navy-800">
+                    {guide.keyTakeaways.slice(0, 2).map((takeaway) => (
+                      <li key={takeaway} className="flex items-start gap-2">
+                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-volt-600" />
+                        <span>{takeaway}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 border-t border-navy-100 pt-4">
+                <Link
+                  to={`/${guide.relatedServiceSlug}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-navy-900 hover:text-volt-700 transition"
+                >
+                  <span>{guide.relatedServiceAnchor}</span>
+                  <ArrowRight className="h-4 w-4 text-volt-600" />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       {/* 13. FULL SERVICE AREAS DIRECTORY */}
       <Section tone="muted">
         <div className="space-y-4">
           <SectionHeading
             eyebrow="Service Coverage"
-            title="Serving Rapid City & the Black Hills Region"
-            description="Our primary facility is in Rapid City at 1720A Samco Rd, and our service trucks travel throughout Pennington, Meade, Lawrence, and Custer counties."
+            title="Serving Rapid City and the Black Hills"
+            description="Bucks Electric is based in Rapid City and serves customers across its surrounding service area. Contact our team to discuss your property's location, project requirements and service availability."
           />
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
@@ -1293,8 +1382,8 @@ export function HomePage() {
 
       {/* 15. FINAL CALL CTA */}
       <CallCta
-        title="Ready to discuss your electrical project in Rapid City?"
-        description={`Call ${SITE.phoneDisplay} today to speak directly with Dale and Buck's Electric Inc. We will evaluate your project, explain the scope, and provide dependable service.`}
+        title="Request an Electrical Service Estimate"
+        description={`Planning an electrical project in Rapid City? Contact Bucks Electric to discuss your requirements and arrange the next steps. Call ${SITE.phoneDisplay} today.`}
       />
     </>
   );

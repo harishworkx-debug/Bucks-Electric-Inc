@@ -1,15 +1,16 @@
 import { MapPin, Phone, Clock3, ExternalLink } from 'lucide-react';
 import { CallButton } from '@/components/CallButton';
 import { PageHero } from '@/components/PageHero';
+import { Link } from '@/lib/router';
 import { breadcrumbSchema } from '@/lib/schema';
 import { useSeo } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
 export function ContactPage() {
   useSeo({
-    title: "Contact Buck's Electric Inc | Rapid City, SD",
+    title: 'Contact Electrician in Rapid City, SD | Bucks Electric',
     description:
-      "Call Buck's Electric Inc at (605) 343-5630 or visit 1720A Samco Rd, Rapid City, SD 57702. Find our location on the map.",
+      'Need to contact an electrician in Rapid City, SD? Call Bucks Electric at (605) 343-5630 or visit 1720A Samco Rd for consultations, quotes, and emergency dispatch.',
     path: '/contact-us',
     jsonLd: [
       breadcrumbSchema([
@@ -22,9 +23,9 @@ export function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contact Us"
-        title="Call Buck's Electric Inc"
-        description="Phone is the fastest way to reach us. Call to describe your electrical problem or project, and we will explain how we can help."
+        eyebrow="Contact Electrician Rapid City"
+        title="Contact Bucks Electric for Electrical Service"
+        description="Phone is the fastest way to reach us. Call (605) 343-5630 to describe your electrical problem or project, and speak directly with our team."
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'Contact Us', path: '/contact-us' },
@@ -96,6 +97,25 @@ export function ContactPage() {
               loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-navy-100 bg-navy-50/60 py-16">
+        <div className="mx-auto max-w-7xl px-5 text-center lg:px-8">
+          <h2 className="text-2xl font-extrabold text-navy-900 sm:text-3xl">
+            Explore Our Electrical Services & Black Hills Coverage
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-base text-navy-700">
+            Bucks Electric provides code-compliant electrical repairs, 200A panel upgrades, EV charger installations, and commercial contracting across Rapid City and 9 surrounding Black Hills communities.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link to="/electrical-services" className="btn-secondary">
+              Browse All 10 Services
+            </Link>
+            <Link to="/service-areas" className="btn-outline">
+              Browse All 10 Service Areas
+            </Link>
           </div>
         </div>
       </section>

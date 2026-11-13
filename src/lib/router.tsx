@@ -1,23 +1,50 @@
-import { useEffect, useState, type AnchorHTMLAttributes, type MouseEvent } from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type AnchorHTMLAttributes,
+  type MouseEvent,
+  type ReactNode,
+} from 'react';
+
+const RouterContext = createContext<string | null>(null);
 
 function readPathname() {
+  if (typeof window === 'undefined') return '/';
   const { pathname } = window.location;
   return pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
 }
 
+export function RouterProvider({
+  pathname,
+  children,
+}: {
+  pathname: string;
+  children: ReactNode;
+}) {
+  return <RouterContext.Provider value={pathname}>{children}</RouterContext.Provider>;
+}
+
 export function usePathname() {
+  const contextPath = useContext(RouterContext);
   const [pathname, setPathname] = useState(readPathname);
 
   useEffect(() => {
+    if (contextPath) {
+      setPathname(contextPath);
+      return;
+    }
     const handleChange = () => setPathname(readPathname());
     window.addEventListener('popstate', handleChange);
     return () => window.removeEventListener('popstate', handleChange);
-  }, []);
+  }, [contextPath]);
 
-  return pathname;
+  return contextPath || pathname;
 }
 
 export function navigate(to: string) {
+  if (typeof window === 'undefined') return;
   if (to === readPathname()) return;
   window.history.pushState(null, '', to);
   window.dispatchEvent(new PopStateEvent('popstate'));

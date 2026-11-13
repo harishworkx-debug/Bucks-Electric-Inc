@@ -2,6 +2,7 @@ import { CallButton } from '@/components/CallButton';
 import { PageHero } from '@/components/PageHero';
 import { Section } from '@/components/SectionHeading';
 import type { LegalSection } from '@/data/legal';
+import { Link } from '@/lib/router';
 import { breadcrumbSchema } from '@/lib/schema';
 import { useSeo } from '@/lib/seo';
 import { SITE } from '@/lib/site';
@@ -17,7 +18,7 @@ export const LEGAL_UPDATED = 'November 8, 2026';
 
 export function LegalPage({ title, description, path, sections }: LegalPageProps) {
   useSeo({
-    title: `${title} | Buck's Electric Inc`,
+    title: `${title} | Bucks Electric`,
     description,
     path,
     jsonLd: [
@@ -53,6 +54,24 @@ export function LegalPage({ title, description, path, sections }: LegalPageProps
               ))}
             </section>
           ))}
+
+          <div className="border-t border-navy-100 pt-8 text-sm text-navy-600">
+            <p>
+              Looking for electrical service? Return to{' '}
+              <Link to="/" className="font-semibold text-navy-900 underline hover:text-navy-700">
+                Home
+              </Link>
+              , browse our{' '}
+              <Link to="/electrical-services" className="font-semibold text-navy-900 underline hover:text-navy-700">
+                Electrical Services
+              </Link>
+              , or{' '}
+              <Link to="/contact-us" className="font-semibold text-navy-900 underline hover:text-navy-700">
+                Contact Bucks Electric
+              </Link>
+              .
+            </p>
+          </div>
         </article>
       </Section>
     </>

@@ -3,7 +3,9 @@ import { CallButton } from '@/components/CallButton';
 import { CallCta } from '@/components/CallCta';
 import { PageHero } from '@/components/PageHero';
 import { Section, SectionHeading } from '@/components/SectionHeading';
+import { ServiceCard } from '@/components/ServiceCard';
 import { SERVICE_AREAS } from '@/data/areas';
+import { SERVICES } from '@/data/services';
 import { Link } from '@/lib/router';
 import { breadcrumbSchema } from '@/lib/schema';
 import { useSeo } from '@/lib/seo';
@@ -11,9 +13,9 @@ import { SITE } from '@/lib/site';
 
 export function ServiceAreasPage() {
   useSeo({
-    title: "Service Areas | Buck's Electric Inc in Rapid City, SD",
+    title: 'Electrician Service Areas in Black Hills, SD | Bucks Electric',
     description:
-      "Service areas for Buck's Electric Inc. Our electrical contractor office is at 1720A Samco Rd in Rapid City, SD. Call (605) 343-5630.",
+      'Bucks Electric provides residential and commercial electrical services across Rapid City and the Black Hills region. Explore our local service communities.',
     path: '/service-areas',
     jsonLd: [
       breadcrumbSchema([
@@ -26,9 +28,9 @@ export function ServiceAreasPage() {
   return (
     <>
       <PageHero
-        eyebrow="Service Areas"
-        title="Electrical Service Areas"
-        description="Buck's Electric Inc is based in Rapid City, South Dakota. Choose your area to see the electrical services available there."
+        eyebrow="Electrician Black Hills SD"
+        title="Electrical Services Across the Black Hills"
+        description="Bucks Electric operates from 1720A Samco Rd in Rapid City, dispatching experienced electricians throughout Pennington, Meade, Lawrence, and Custer counties."
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'Service Areas', path: '/service-areas' },
@@ -58,6 +60,20 @@ export function ServiceAreasPage() {
                 {`View electrician services in ${area.name}`}
               </span>
             </Link>
+          ))}
+        </div>
+      </Section>
+
+      {/* Electrical Services available across all areas */}
+      <Section tone="muted">
+        <SectionHeading
+          eyebrow="Our Capabilities"
+          title="Electrical services provided throughout the Black Hills"
+          description="Every community listed above receives full access to our residential, commercial, and emergency electrical solutions."
+        />
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          {SERVICES.map((service) => (
+            <ServiceCard key={service.slug} service={service} />
           ))}
         </div>
       </Section>

@@ -5,16 +5,18 @@ import { Section, SectionHeading } from '@/components/SectionHeading';
 import { ServiceCard } from '@/components/ServiceCard';
 import { SERVICES } from '@/data/services';
 import { SERVICE_AREAS } from '@/data/areas';
+import { ELECTRICAL_GUIDES } from '@/data/guides';
 import { Link } from '@/lib/router';
 import { breadcrumbSchema } from '@/lib/schema';
 import { useSeo } from '@/lib/seo';
 import { SITE } from '@/lib/site';
+import { ArrowRight, BookOpen, CheckCircle2 } from 'lucide-react';
 
 export function ServicesPage() {
   useSeo({
-    title: "Electrical Services in Rapid City, SD | Buck's Electric Inc",
+    title: 'Electrical Services in Rapid City, SD | Bucks Electric',
     description:
-      "Electrical repair, installation, wiring, panel upgrades, lighting, and commercial electrical work from Buck's Electric Inc in Rapid City, SD.",
+      'Looking for professional electrical services in Rapid City, SD? Bucks Electric provides residential and commercial electrical work, repairs, panel upgrades, and installations.',
     path: '/electrical-services',
     jsonLd: [
       breadcrumbSchema([
@@ -27,9 +29,9 @@ export function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Electrical Services"
-        title="Electrical Services in Rapid City, SD"
-        description="Choose the service that matches your situation. Each page explains the common problems, how the work is carried out, and how to reach us."
+        eyebrow="Electrical Services Rapid City"
+        title="Electrical Services for Homes and Businesses"
+        description="Explore professional electrical services across Rapid City and the Black Hills. Each service page explains typical issues, process, and code requirements."
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'Electrical Services', path: '/electrical-services' },
@@ -65,9 +67,57 @@ export function ServicesPage() {
         </div>
       </Section>
 
+      <Section>
+        <SectionHeading
+          eyebrow="Electrical Knowledge Base"
+          title="Educational Guides for Homeowners & Property Managers"
+          description="Read our comprehensive guides covering electrical panel upgrades, Level 2 EV charging stations, wiring safety, and commercial power solutions."
+        />
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {ELECTRICAL_GUIDES.slice(0, 6).map((guide) => (
+            <article
+              key={guide.id}
+              className="card-lift flex flex-col justify-between rounded-2xl border border-navy-100 bg-white p-7 shadow-sm"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between text-xs font-bold">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-volt-500/15 px-3 py-1 text-navy-900">
+                    <BookOpen className="h-3.5 w-3.5 text-volt-600" />
+                    {guide.category}
+                  </span>
+                  <span className="text-navy-500">{guide.readTime}</span>
+                </div>
+                <h3 className="text-xl font-bold text-navy-900">{guide.title}</h3>
+                <p className="text-sm leading-relaxed text-navy-700">{guide.summary}</p>
+                <div className="space-y-2 border-t border-navy-100 pt-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-navy-500">Key Takeaways:</p>
+                  <ul className="space-y-1.5 text-xs text-navy-800">
+                    {guide.keyTakeaways.slice(0, 2).map((takeaway) => (
+                      <li key={takeaway} className="flex items-start gap-2">
+                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-volt-600" />
+                        <span>{takeaway}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-6 border-t border-navy-100 pt-4">
+                <Link
+                  to={`/${guide.relatedServiceSlug}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-navy-900 hover:text-volt-700 transition"
+                >
+                  <span>{guide.relatedServiceAnchor}</span>
+                  <ArrowRight className="h-4 w-4 text-volt-600" />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       <CallCta
         title="Not sure which service you need?"
-        description={`Call Buck's Electric Inc at ${SITE.phoneDisplay}. Describe the problem, and we will help you figure out the next step.`}
+        description={`Call Bucks Electric at ${SITE.phoneDisplay}. Describe the problem, and we will help you figure out the next step.`}
       />
     </>
   );

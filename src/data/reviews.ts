@@ -15,8 +15,8 @@ export interface Review {
 export const GOOGLE_REVIEWS_SUMMARY = {
   rating: 4.8,
   totalReviews: 9,
-  writeReviewUrl: 'https://maps.app.goo.gl/nxxC7TsSdQ3HqFkp7',
-  readReviewsUrl: 'https://maps.app.goo.gl/nxxC7TsSdQ3HqFkp7',
+  writeReviewUrl: 'https://maps.app.goo.gl/ez95mPFgytMtX7Va8',
+  readReviewsUrl: 'https://maps.app.goo.gl/ez95mPFgytMtX7Va8',
 };
 
 export const GOOGLE_REVIEWS: Review[] = [
