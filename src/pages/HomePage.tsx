@@ -382,7 +382,7 @@ export function HomePage() {
           alt="Electrical panel installation by Bucks Electric in Rapid City SD"
           width={940}
           height={650}
-          fetchpriority="high"
+          fetchPriority="high"
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/60" />

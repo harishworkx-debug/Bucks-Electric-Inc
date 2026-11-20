@@ -10,6 +10,9 @@ import {
 import { SERVICES, findService } from '@/data/services';
 import { SERVICE_AREAS, findServiceArea } from '@/data/areas';
 import { HOME_FAQS } from '@/data/faqs';
+import { USE_LANDING_PAGE_AS_HOME } from '@/siteMode';
+import { getStandaloneSeoMetadata } from '@/standalone-landing/seo/landingSeo';
+import { isStandaloneRoute } from '@/routes';
 
 export interface PageSeo {
   title: string;
@@ -30,6 +33,7 @@ export function getAllRoutes(): string[] {
     '/contact-us',
     '/privacy-policy',
     '/terms-and-conditions',
+    '/home-page',
   ];
   const serviceRoutes = SERVICES.map((s) => `/${s.slug}`);
   const areaRoutes = SERVICE_AREAS.map((a) => `/${a.slug}`);
@@ -38,6 +42,19 @@ export function getAllRoutes(): string[] {
 
 export function getPageSeo(pathname: string): PageSeo {
   const cleanPath = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
+
+  // Standalone Landing Page (when active at root or on dedicated standby route)
+  if ((USE_LANDING_PAGE_AS_HOME && cleanPath === '/') || isStandaloneRoute(cleanPath)) {
+    const meta = getStandaloneSeoMetadata(cleanPath);
+    return {
+      title: meta.title,
+      description: meta.description,
+      path: cleanPath,
+      canonical: meta.canonical,
+      jsonLd: [meta.schema],
+      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    };
+  }
 
   // 1. Home
   if (cleanPath === '/') {
