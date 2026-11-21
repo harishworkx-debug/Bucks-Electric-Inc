@@ -1,9 +1,9 @@
 export const SITE = {
   name: "Buck's Electric Inc",
   url: 'https://www.buckselectricsd.com',
-  phoneHref: 'tel:+16053435630',
-  phoneE164: '+16053435630',
-  phoneDisplay: '(605) 343-5630',
+  phoneHref: 'tel:+16059304504',
+  phoneE164: '+16059304504',
+  phoneDisplay: '(605) 930-4504',
   streetAddress: '1720A Samco Rd',
   city: 'Rapid City',
   region: 'SD',

@@ -138,7 +138,7 @@ Replaced thin text with authentic, transparent regional details for all 10 Black
 * **Electrician / LocalBusiness Schema**:
   - Exact legal name: `Buck's Electric Inc`
   - Address: `1720A Samco Rd, Rapid City, SD 57702`
-  - Telephone: `+1 605-343-5630`
+  - Telephone: `+1 605-930-4504`
   - URL: `https://www.buckselectricsd.com/`
   - PriceRange: `$$`
   - Verified AggregateRating: `4.8` based on `9` Google reviews.

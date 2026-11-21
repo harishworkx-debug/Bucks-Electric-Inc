@@ -98,7 +98,7 @@ Sitemap: https://www.buckselectricsd.com/sitemap.xml
 1. **LocalBusiness / Electrician**:
    - `@type`: `Electrician`
    - `name`: `Buck's Electric Inc`
-   - `telephone`: `+1 605-343-5630`
+   - `telephone`: `+1 605-930-4504`
    - `address`: `1720A Samco Rd, Rapid City, SD 57702`
    - `priceRange`: `$$`
    - `aggregateRating`: `4.8` (9 reviews)

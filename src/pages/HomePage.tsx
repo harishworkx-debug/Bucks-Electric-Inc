@@ -263,7 +263,7 @@ const PROCESS_STEPS = [
   {
     step: '01',
     title: 'Direct Phone Consultation',
-    text: 'Call (605) 343-5630 to discuss your electrical project or issue with our team. We gather details to ensure the right tools and parts are prepared.',
+    text: 'Call (605) 930-4504 to discuss your electrical project or issue with our team. We gather details to ensure the right tools and parts are prepared.',
   },
   {
     step: '02',
@@ -666,7 +666,7 @@ export function HomePage() {
 
             <div className="mt-8 pt-6 border-t border-navy-100 flex items-center justify-between">
               <span className="text-sm font-semibold text-navy-600">Safe, code-compliant home power</span>
-              <CallButton label="Call (605) 343-5630" />
+              <CallButton label="Call (605) 930-4504" />
             </div>
           </div>
 

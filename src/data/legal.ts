@@ -8,7 +8,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     heading: 'Information we collect',
     paragraphs: [
       'This website does not contain contact forms, quote requests, booking forms, or newsletter sign-ups. We do not ask visitors to submit personal information through the website.',
-      'If you choose to call Buck\'s Electric Inc at (605) 343-5630, the information you share during that call is handled as part of our normal business communications.',
+      'If you choose to call Buck\'s Electric Inc at (605) 930-4504, the information you share during that call is handled as part of our normal business communications.',
     ],
   },
   {
@@ -32,7 +32,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     heading: 'Contact us',
     paragraphs: [
-      'For questions about this Privacy Policy, call Buck\'s Electric Inc at (605) 343-5630 or visit us at 1720A Samco Rd, Rapid City, SD 57702.',
+      'For questions about this Privacy Policy, call Buck\'s Electric Inc at (605) 930-4504 or visit us at 1720A Samco Rd, Rapid City, SD 57702.',
     ],
   },
 ];
@@ -53,7 +53,7 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: 'Electrical safety',
     paragraphs: [
-      'Electrical problems can be dangerous. If you notice burning smells, sparks, warm outlets, or repeated breaker trips, switch off power to the affected circuit where it is safe to do so and call (605) 343-5630 before continuing to use it.',
+      'Electrical problems can be dangerous. If you notice burning smells, sparks, warm outlets, or repeated breaker trips, switch off power to the affected circuit where it is safe to do so and call (605) 930-4504 before continuing to use it.',
     ],
   },
   {
@@ -77,7 +77,7 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: 'Contact us',
     paragraphs: [
-      'For questions about these Terms and Conditions, call (605) 343-5630 or visit 1720A Samco Rd, Rapid City, SD 57702.',
+      'For questions about these Terms and Conditions, call (605) 930-4504 or visit 1720A Samco Rd, Rapid City, SD 57702.',
     ],
   },
 ];

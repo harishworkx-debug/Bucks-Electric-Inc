@@ -63,7 +63,7 @@ export const SERVICES: Service[] = [
     heading: 'Electrical Repair in Rapid City, SD',
     intro: [
       'When an electrical problem stops something from working, or makes it behave strangely, it needs attention before it becomes a safety issue. Bucks Electric provides dependable electrical repair and emergency electrical repair in Rapid City, South Dakota, operating from our central shop at 1720A Samco Rd.',
-      'Repairs start with an accurate electrical problem diagnosis and circuit breaker replacement instead of swapping parts blindly. Call (605) 343-5630 to describe what you are seeing and to arrange a prompt visit from our local electricians.',
+      'Repairs start with an accurate electrical problem diagnosis and circuit breaker replacement instead of swapping parts blindly. Call (605) 930-4504 to describe what you are seeing and to arrange a prompt visit from our local electricians.',
     ],
     problems: [
       {
@@ -141,7 +141,7 @@ export const SERVICES: Service[] = [
       {
         question: 'Should I keep using an outlet that is warm or smells like burning?',
         answer:
-          'No. Switch off the breaker for that circuit immediately and call (605) 343-5630. Heat or a burning smell indicates an active electrical resistance or arcing fault that poses an immediate fire hazard.',
+          'No. Switch off the breaker for that circuit immediately and call (605) 930-4504. Heat or a burning smell indicates an active electrical resistance or arcing fault that poses an immediate fire hazard.',
       },
       {
         question: 'Why does my breaker keep tripping?',
@@ -176,7 +176,7 @@ export const SERVICES: Service[] = [
     heading: 'Electrical Installation Rapid City, SD',
     intro: [
       'Electrical installation covers new outlets, switches, dedicated circuits, and connections for equipment, whether you are finishing a basement, expanding a commercial building, or installing heavy equipment. Bucks Electric provides professional installation work throughout Rapid City and Pennington County.',
-      'Sound installation begins with calculating continuous electrical demand and ensuring the main distribution system has ample capacity. Call (605) 343-5630 to talk through your project requirements.',
+      'Sound installation begins with calculating continuous electrical demand and ensuring the main distribution system has ample capacity. Call (605) 930-4504 to talk through your project requirements.',
     ],
     problems: [
       {
@@ -251,7 +251,7 @@ export const SERVICES: Service[] = [
       {
         question: 'How do I get an estimate for an installation project?',
         answer:
-          'Call (605) 343-5630 with your property location and project scope. We can provide ballpark insights and schedule an on-site evaluation.',
+          'Call (605) 930-4504 with your property location and project scope. We can provide ballpark insights and schedule an on-site evaluation.',
       },
     ],
     image: {
@@ -276,7 +276,7 @@ export const SERVICES: Service[] = [
     heading: 'Electrical Panel Upgrade in Rapid City, SD',
     intro: [
       'The electrical panel is the central distribution hub where utility power enters your property and is safely divided into individual circuits. If you are planning an electrical panel replacement or a 200-amp electrical service upgrade in Rapid City, Bucks Electric delivers code-compliant, master-level craftsmanship.',
-      'From replacing hazardous fuse boxes and obsolete breaker brands to upgrading utility service masts and meter bases, call (605) 343-5630 to discuss your electrical panel requirements.',
+      'From replacing hazardous fuse boxes and obsolete breaker brands to upgrading utility service masts and meter bases, call (605) 930-4504 to discuss your electrical panel requirements.',
     ],
     problems: [
       {
@@ -409,7 +409,7 @@ export const SERVICES: Service[] = [
     heading: 'Lighting Installation in Rapid City, SD',
     intro: [
       'Thoughtful lighting completely changes how a living space or commercial facility functions and feels. Bucks Electric provides professional lighting installation across Rapid City, South Dakota, from recessed LED conversions and statement chandeliers to durable outdoor security lighting.',
-      'Call (605) 343-5630 to describe the space you wish to illuminate. We evaluate existing wiring paths, switch locations, and circuit loads before work begins.',
+      'Call (605) 930-4504 to describe the space you wish to illuminate. We evaluate existing wiring paths, switch locations, and circuit loads before work begins.',
     ],
     problems: [
       {
@@ -522,7 +522,7 @@ export const SERVICES: Service[] = [
     heading: 'Electrical Wiring and Rewiring in Rapid City, SD',
     intro: [
       'Electrical wiring safely carries power throughout your property. Over decades, wiring insulation can degrade, connections can loosen, and older wire gauges can become inadequate for modern electrical demands. Bucks Electric provides professional residential and commercial wiring across Rapid City and the Black Hills.',
-      'From new construction and full basement rewiring to replacing dangerous knob-and-tube or ungrounded wiring, call (605) 343-5630 to discuss your project with an experienced electrician.',
+      'From new construction and full basement rewiring to replacing dangerous knob-and-tube or ungrounded wiring, call (605) 930-4504 to discuss your project with an experienced electrician.',
     ],
     problems: [
       {
@@ -635,7 +635,7 @@ export const SERVICES: Service[] = [
     heading: 'Commercial Electrician in Rapid City, SD',
     intro: [
       'Commercial enterprises depend on continuous, reliable electrical power. From retail storefronts and car showrooms to warehouses, medical clinics, and restaurants, electrical downtime directly impacts your bottom line. Bucks Electric delivers commercial electrical contracting, maintenance, and installations throughout Rapid City and the Black Hills.',
-      'Our team is experienced in 3-phase power distribution, commercial lighting systems, machinery connections, and code compliance. Call (605) 343-5630 to discuss your commercial facility needs.',
+      'Our team is experienced in 3-phase power distribution, commercial lighting systems, machinery connections, and code compliance. Call (605) 930-4504 to discuss your commercial facility needs.',
     ],
     problems: [
       {
@@ -768,7 +768,7 @@ export const SERVICES: Service[] = [
     heading: 'Electrical Troubleshooting in Rapid City, SD',
     intro: [
       'Some electrical problems are obvious, like a broken switch toggle. But the most dangerous electrical issues are subtle and intermittent—a circuit that cuts out only on windy days, a breaker that trips whenever two appliances run, or a mystery wall switch that leaves a room without power. Bucks Electric provides systematic electrical troubleshooting throughout Rapid City and Pennington County.',
-      'Call (605) 343-5630 to describe the symptoms you are experiencing. We bring professional diagnostic instrumentation to isolate the exact cause before opening walls or replacing components.',
+      'Call (605) 930-4504 to describe the symptoms you are experiencing. We bring professional diagnostic instrumentation to isolate the exact cause before opening walls or replacing components.',
     ],
     problems: [
       {
@@ -856,7 +856,7 @@ export const SERVICES: Service[] = [
       {
         question: 'What should I do if an outlet feels warm or buzzes while I wait for service?',
         answer:
-          'Shut off the breaker controlling that outlet immediately. Do not attempt to use the outlet. If you are unsure which breaker controls it, call (605) 343-5630 and we will walk you through safety precautions.',
+          'Shut off the breaker controlling that outlet immediately. Do not attempt to use the outlet. If you are unsure which breaker controls it, call (605) 930-4504 and we will walk you through safety precautions.',
       },
     ],
     image: {
@@ -881,7 +881,7 @@ export const SERVICES: Service[] = [
     heading: 'Outlet and Switch Installation in Rapid City, SD',
     intro: [
       'Outlets and switches are the electrical touchpoints you interact with every single day. Worn, loose, or cracked receptacles are more than an inconvenience—they are a frequent cause of electrical fires and shocks. Bucks Electric provides professional outlet replacement, GFCI upgrades, and switch installations across Rapid City.',
-      'From upgrading two-prong outlets to grounded tamper-resistant devices, installing USB-C charging receptacles, or configuring 3-way smart lighting switches, call (605) 343-5630 for dependable service.',
+      'From upgrading two-prong outlets to grounded tamper-resistant devices, installing USB-C charging receptacles, or configuring 3-way smart lighting switches, call (605) 930-4504 for dependable service.',
     ],
     problems: [
       {
@@ -994,7 +994,7 @@ export const SERVICES: Service[] = [
     heading: 'EV Charger Installation in Rapid City, SD',
     intro: [
       'A dedicated Level 2 EV charging station at your Rapid City home transforms electric vehicle ownership, providing fast, overnight replenishment so you always start the day with maximum range. Bucks Electric delivers certified, code-compliant EV charger installations throughout Rapid City and Pennington County.',
-      'We install high-power charging stations for Tesla (Universal Wall Connector), Ford Charge Station Pro, Chevrolet, Rivian, Hyundai, and universal J1772/NACS vehicles. Call (605) 343-5630 to plan your home or business EV installation.',
+      'We install high-power charging stations for Tesla (Universal Wall Connector), Ford Charge Station Pro, Chevrolet, Rivian, Hyundai, and universal J1772/NACS vehicles. Call (605) 930-4504 to plan your home or business EV installation.',
     ],
     problems: [
       {
@@ -1131,7 +1131,7 @@ export const SERVICES: Service[] = [
     heading: 'Generator Installation in Rapid City, SD',
     intro: [
       'Severe weather in the Black Hills—from heavy winter blizzards and ice storms to summer high winds—can knock out electrical utility power for hours or days. A properly installed backup generator protects your family from freezing temperatures, keeps well pumps and medical equipment running, and prevents costly food spoilage.',
-      'Bucks Electric provides professional standby generator installations and portable generator manual transfer switch hookups throughout Rapid City and Pennington County. Call (605) 343-5630 to discuss backup power solutions.',
+      'Bucks Electric provides professional standby generator installations and portable generator manual transfer switch hookups throughout Rapid City and Pennington County. Call (605) 930-4504 to discuss backup power solutions.',
     ],
     problems: [
       {

@@ -9,7 +9,7 @@ import { SERVICES } from '@/data/services';
 export function NotFoundPage() {
   useSeo({
     title: "Page Not Found | Buck's Electric Inc",
-    description: "The page you are looking for could not be found. Return to Buck's Electric Inc or call (605) 343-5630.",
+    description: "The page you are looking for could not be found. Return to Buck's Electric Inc or call (605) 930-4504.",
     noindex: true,
   });
 

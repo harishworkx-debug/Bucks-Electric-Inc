@@ -59,7 +59,7 @@ This roadmap outlines the strategic phases required to establish, grow, and conv
 * **Milestones & Deliverables**:
   1. [ ] **Google Search Console Sitemap Submission**: Submit `https://www.buckselectricsd.com/sitemap.xml` and verify 27 discovered URLs.
   2. [ ] **Google Business Profile (GBP) Audit**:
-     - Ensure NAP matches `1720A Samco Rd, Rapid City, SD 57702`, Phone: `(605) 343-5630`.
+     - Ensure NAP matches `1720A Samco Rd, Rapid City, SD 57702`, Phone: `(605) 930-4504`.
      - Populate GBP Services tab with all 10 core services.
      - Upload 10+ real project photos (commercial showroom, panel before/after, service vans).
   3. [ ] **Review Acceleration Workflow**:
@@ -90,7 +90,7 @@ This roadmap outlines the strategic phases required to establish, grow, and conv
      - Review GSC **Indexing → Pages** report.
      - Verify zero pages remain under "Discovered – currently not indexed" or "Soft 404".
   3. [ ] **Conversion Rate Optimization (CRO)**:
-     - Monitor click-to-call conversions on `tel:+16053435630`.
+     - Monitor click-to-call conversions on `tel:+16059304504`.
      - Monitor estimate form submissions.
      - Ensure mobile sticky call buttons remain frictionless across iOS and Android browsers.
   4. [ ] **Content Expansion**:

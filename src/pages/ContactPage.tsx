@@ -10,7 +10,7 @@ export function ContactPage() {
   useSeo({
     title: 'Contact Electrician in Rapid City, SD | Bucks Electric',
     description:
-      'Need to contact an electrician in Rapid City, SD? Call Bucks Electric at (605) 343-5630 or visit 1720A Samco Rd for consultations, quotes, and emergency dispatch.',
+      'Need to contact an electrician in Rapid City, SD? Call Bucks Electric at (605) 930-4504 or visit 1720A Samco Rd for consultations, quotes, and emergency dispatch.',
     path: '/contact-us',
     jsonLd: [
       breadcrumbSchema([
@@ -25,7 +25,7 @@ export function ContactPage() {
       <PageHero
         eyebrow="Contact Electrician Rapid City"
         title="Contact Bucks Electric for Electrical Service"
-        description="Phone is the fastest way to reach us. Call (605) 343-5630 to describe your electrical problem or project, and speak directly with our team."
+        description="Phone is the fastest way to reach us. Call (605) 930-4504 to describe your electrical problem or project, and speak directly with our team."
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'Contact Us', path: '/contact-us' },

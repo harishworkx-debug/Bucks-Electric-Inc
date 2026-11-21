@@ -22,7 +22,7 @@ const VALUES = [
   {
     icon: Handshake,
     title: 'Local and accountable',
-    text: 'We are based in Rapid City at 1720A Samco Rd. You can call us directly at (605) 343-5630 and speak with us about your work.',
+    text: 'We are based in Rapid City at 1720A Samco Rd. You can call us directly at (605) 930-4504 and speak with us about your work.',
   },
 ];
 

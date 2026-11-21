@@ -9,7 +9,6 @@ const routes = [
   '/contact-us',
   '/privacy-policy',
   '/terms-and-conditions',
-  '/home-page',
   '/electrical-repair-rapid-city-sd',
   '/electrical-installation-rapid-city-sd',
   '/electrical-panel-upgrade-rapid-city-sd',

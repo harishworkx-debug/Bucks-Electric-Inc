@@ -10,9 +10,6 @@ import {
 import { SERVICES, findService } from '@/data/services';
 import { SERVICE_AREAS, findServiceArea } from '@/data/areas';
 import { HOME_FAQS } from '@/data/faqs';
-import { USE_LANDING_PAGE_AS_HOME } from '@/siteMode';
-import { getStandaloneSeoMetadata } from '@/standalone-landing/seo/landingSeo';
-import { isStandaloneRoute } from '@/routes';
 
 export interface PageSeo {
   title: string;
@@ -33,7 +30,6 @@ export function getAllRoutes(): string[] {
     '/contact-us',
     '/privacy-policy',
     '/terms-and-conditions',
-    '/home-page',
   ];
   const serviceRoutes = SERVICES.map((s) => `/${s.slug}`);
   const areaRoutes = SERVICE_AREAS.map((a) => `/${a.slug}`);
@@ -42,19 +38,6 @@ export function getAllRoutes(): string[] {
 
 export function getPageSeo(pathname: string): PageSeo {
   const cleanPath = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
-
-  // Standalone Landing Page (when active at root or on dedicated standby route)
-  if ((USE_LANDING_PAGE_AS_HOME && cleanPath === '/') || isStandaloneRoute(cleanPath)) {
-    const meta = getStandaloneSeoMetadata(cleanPath);
-    return {
-      title: meta.title,
-      description: meta.description,
-      path: cleanPath,
-      canonical: meta.canonical,
-      jsonLd: [meta.schema],
-      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    };
-  }
 
   // 1. Home
   if (cleanPath === '/') {
@@ -132,7 +115,7 @@ export function getPageSeo(pathname: string): PageSeo {
     return {
       title: 'Contact Electrician in Rapid City, SD | Bucks Electric',
       description:
-        'Need to contact an electrician in Rapid City, SD? Call Bucks Electric at (605) 343-5630 or visit 1720A Samco Rd for consultations, quotes, and emergency dispatch.',
+        'Need to contact an electrician in Rapid City, SD? Call Bucks Electric at (605) 930-4504 or visit 1720A Samco Rd for consultations, quotes, and emergency dispatch.',
       path: '/contact-us',
       canonical: `${SITE.url}/contact-us`,
       jsonLd: [
@@ -232,7 +215,7 @@ export function getPageSeo(pathname: string): PageSeo {
   // 10. Fallback 404
   return {
     title: "Page Not Found | Buck's Electric Inc",
-    description: "The page you are looking for does not exist. Call Buck's Electric at (605) 343-5630.",
+    description: "The page you are looking for does not exist. Call Buck's Electric at (605) 930-4504.",
     path: cleanPath,
     canonical: `${SITE.url}${cleanPath}`,
     jsonLd: [],

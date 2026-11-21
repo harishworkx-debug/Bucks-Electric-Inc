@@ -2,7 +2,7 @@
 **Website:** [https://www.buckselectricsd.com/](https://www.buckselectricsd.com/)  
 **Business Name:** Buck's Electric Inc  
 **Primary Location:** 1720A Samco Rd, Rapid City, SD 57702  
-**Phone:** +1 605-343-5630  
+**Phone:** +1 605-930-4504  
 **Google Maps URL:** [https://maps.app.goo.gl/ez95mPFgytMtX7Va8](https://maps.app.goo.gl/ez95mPFgytMtX7Va8)  
 
 ---
@@ -28,7 +28,7 @@ Google evaluates NAP consistency (Name, Address, Phone Number) across the entire
 | **Business Name** | `Buck's Electric Inc` |
 | **Street Address** | `1720A Samco Rd` |
 | **City, State, Zip** | `Rapid City, SD 57702` |
-| **Phone Number** | `+1 605-343-5630` |
+| **Phone Number** | `+1 605-930-4504` |
 | **Primary Category** | `Electrician` |
 | **Secondary Categories** | `Electrical installation service`, `Electrical repair shop`, `Lighting contractor` |
 | **Website URL** | `https://www.buckselectricsd.com/` |

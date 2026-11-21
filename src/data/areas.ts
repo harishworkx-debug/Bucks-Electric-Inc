@@ -31,13 +31,13 @@ export const SERVICE_AREAS: ServiceArea[] = [
     name: 'Rapid City, SD',
     metaTitle: 'Electrician in Rapid City, SD | Bucks Electric',
     metaDescription:
-      'Licensed electrician in Rapid City, SD providing residential and commercial electrical repairs, panel upgrades, wiring, and lighting. Call (605) 343-5630.',
+      'Licensed electrician in Rapid City, SD providing residential and commercial electrical repairs, panel upgrades, wiring, and lighting. Call (605) 930-4504.',
     heading: 'Electrician in Rapid City, SD',
     summary:
       'Comprehensive residential and commercial electrical repairs, 200A panel upgrades, EV chargers, and rewiring in Rapid City.',
     intro: [
       'Bucks Electric is headquartered at 1720A Samco Rd in Rapid City, South Dakota. As a locally owned electrical contractor holding a 4.8-star Google rating, we provide dependable master-level electrical services across Pennington County.',
-      'Whether you are dealing with flickering lights in a historic West Boulevard home, modernizing an overloaded circuit breaker panel, or outfitting a commercial showroom, our licensed electricians provide transparent pricing and code-compliant workmanship. Call (605) 343-5630 to schedule service.',
+      'Whether you are dealing with flickering lights in a historic West Boulevard home, modernizing an overloaded circuit breaker panel, or outfitting a commercial showroom, our licensed electricians provide transparent pricing and code-compliant workmanship. Call (605) 930-4504 to schedule service.',
     ],
     localContext: [
       'Rapid City sits at the base of the Black Hills where summer thunderstorms cause severe utility surges and winter blizzards push home heating systems to their limits. Many neighborhoods—including West Boulevard, Robbinsdale, and Canyon Lake—feature homes built between 1940 and 1980 with original 60A or 100A electrical services.',
@@ -63,7 +63,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       {
         question: 'Where is Bucks Electric physically located in Rapid City?',
         answer:
-          'Our office and shop are located at 1720A Samco Rd, Rapid City, SD 57702. Customers are welcome to contact us directly at (605) 343-5630.',
+          'Our office and shop are located at 1720A Samco Rd, Rapid City, SD 57702. Customers are welcome to contact us directly at (605) 930-4504.',
       },
       {
         question: 'Do you offer commercial electrical services in Rapid City?',
@@ -88,7 +88,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Electrical repairs, 200A service upgrades, Level 2 EV charging stations, and new wiring for Box Elder homes and businesses.',
     intro: [
       'Box Elder is one of the fastest-growing communities in South Dakota, driven by residential subdivision expansions and the historic B-21 Raider mission at Ellsworth Air Force Base. Bucks Electric provides dependable residential and commercial electrical services for Box Elder property owners.',
-      'Dispatched directly from our Rapid City shop just minutes away, our electricians handle everything from dedicated garage circuits and home EV chargers to commercial lighting. Call (605) 343-5630 to discuss your electrical project.',
+      'Dispatched directly from our Rapid City shop just minutes away, our electricians handle everything from dedicated garage circuits and home EV chargers to commercial lighting. Call (605) 930-4504 to discuss your electrical project.',
     ],
     localContext: [
       'The explosive housing growth in Box Elder means many homeowners are finishing basements, adding Level 2 electric vehicle chargers, or equipping detached outbuildings with subpanels. Meanwhile, established homes near the Douglas School District and Highway 14/16 corridor frequently need breaker upgrades to handle modern appliance loads.',
@@ -137,7 +137,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Residential electrical repairs, well pump wiring, panel upgrades, and lighting for homes and properties in Black Hawk.',
     intro: [
       'Black Hawk sits nestled along the foothills of the Black Hills just northwest of Rapid City along the Meade County line. Bucks Electric serves Black Hawk homeowners with prompt, honest electrical contracting scheduled directly from our 1720A Samco Rd headquarters.',
-      'From troubleshooting dead circuits and upgrading older 100-amp panels to wiring detached workshops and exterior lighting, call (605) 343-5630 to speak with an experienced electrician.',
+      'From troubleshooting dead circuits and upgrading older 100-amp panels to wiring detached workshops and exterior lighting, call (605) 930-4504 to speak with an experienced electrician.',
     ],
     localContext: [
       'Properties in Black Hawk often feature acreage lots, detached workshops, private well systems, and custom homes exposed to heavy foothills winds and winter cold. Reliable electrical distribution to outbuildings and freeze-protected heating circuits are vital.',
@@ -166,7 +166,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       {
         question: 'How do I schedule an electrical repair in Black Hawk?',
         answer:
-          'Call our office at (605) 343-5630. We can discuss your symptoms, provide clear pricing expectations, and dispatch a technician to your property.',
+          'Call our office at (605) 930-4504. We can discuss your symptoms, provide clear pricing expectations, and dispatch a technician to your property.',
       },
     ],
   },
@@ -181,7 +181,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Residential electrical installations, finished basement wiring, panel modernizations, and EV chargers for Summerset residents.',
     intro: [
       'Summerset is an active, family-friendly community positioned along the Interstate 90 corridor between Black Hawk and Piedmont. Bucks Electric provides premier electrical wiring, installations, and repairs for Summerset homeowners.',
-      'Whether you are finishing a lower-level living area, modernizing your interior lighting with recessed LED downlights, or installing backup generator interlocks, our team delivers code-compliant excellence. Call (605) 343-5630 to schedule your appointment.',
+      'Whether you are finishing a lower-level living area, modernizing your interior lighting with recessed LED downlights, or installing backup generator interlocks, our team delivers code-compliant excellence. Call (605) 930-4504 to schedule your appointment.',
     ],
     localContext: [
       'As a master-planned community that has seen substantial expansion over the past two decades, Summerset homes typically feature modern 200-amp service panels. However, growing families frequently require additional circuits for basement bedroom additions, entertainment suites, hot tubs, and garage electric vehicle charging stations.',
@@ -225,7 +225,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Acreage property electrical service, 200A/400A panel upgrades, barn wiring, and repairs in Piedmont, South Dakota.',
     intro: [
       'Located along the Piedmont Valley at the eastern foot of the Northern Black Hills, Piedmont features a unique mix of residential neighborhoods, equestrian homesteads, and rural acreage properties. Bucks Electric brings dependable electrical contracting to Piedmont homeowners and agricultural properties.',
-      'From upgrading undersized rural electrical services to troubleshooting intermittent power outages on outbuildings, call (605) 343-5630 to speak directly with an electrician.',
+      'From upgrading undersized rural electrical services to troubleshooting intermittent power outages on outbuildings, call (605) 930-4504 to speak directly with an electrician.',
     ],
     localContext: [
       'Rural and foothills properties in Piedmont often feature long underground service runs from utility transformers to main panels, making proper wire sizing critical to prevent voltage drops. In addition, properties with horse barns, detached workshops, and well pumps place high continuous demands on electrical distribution.',
@@ -269,7 +269,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Electrical services for historic properties, seasonal cabins, commercial restaurants, and year-round homes in Hill City.',
     intro: [
       'Hill City—the "Heart of the Black Hills"—is renowned for its rich history, timbered mountain cabins, tourist attractions, and active Main Street businesses. Bucks Electric provides professional electrical services across Hill City, dispatched from our Rapid City headquarters.',
-      'From modernizing cabin fuse boxes and installing winter freeze-protection circuits to commercial restaurant and retail lighting, call (605) 343-5630 to discuss your electrical needs.',
+      'From modernizing cabin fuse boxes and installing winter freeze-protection circuits to commercial restaurant and retail lighting, call (605) 930-4504 to discuss your electrical needs.',
     ],
     localContext: [
       'Nestled deep in the Black Hills National Forest along US-16, Hill City experiences heavier mountain snowfall and colder winter extremes than the foothills below. Mountain cabins and seasonal lodging properties often sit unheated during shoulder months, making safe wiring and dedicated heat-tape circuits essential to prevent burst plumbing.',
@@ -313,7 +313,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Commercial hospitality electrical maintenance, boardwalk lighting, residential repairs, and 3-phase power in Keystone.',
     intro: [
       'Keystone serves as the world-famous gateway to Mount Rushmore National Memorial. With millions of annual visitors, Keystone’s hotels, boardwalk shops, and restaurants depend on flawless electrical reliability. Bucks Electric delivers commercial and residential electrical services throughout Keystone, South Dakota.',
-      'Whether you operate a hospitality business preparing for the peak summer tourist season or need residential electrical repairs on a mountain home, call (605) 343-5630 to speak with our licensed team.',
+      'Whether you operate a hospitality business preparing for the peak summer tourist season or need residential electrical repairs on a mountain home, call (605) 930-4504 to speak with our licensed team.',
     ],
     localContext: [
       'During the summer tourism rush, Keystone’s electrical grid and commercial facilities run at peak capacity. Commercial kitchens, HVAC chillers, illuminated signage, and boardwalk lighting operate under heavy continuous loads. Electrical failures during July or August can cost businesses thousands in lost revenue.',
@@ -357,7 +357,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Commercial venue power distribution, residential panel upgrades, rewiring, and lighting services in Sturgis, South Dakota.',
     intro: [
       'Sturgis is world-renowned for hosting the annual Sturgis Motorcycle Rally, yet it remains a vibrant, year-round community with busy local businesses, civic institutions, and historic residential neighborhoods. Bucks Electric provides commercial and residential electrical contracting across Sturgis, coordinated from our Rapid City facility.',
-      'From commercial venue power distribution and main service upgrades to troubleshooting home circuits and installing EV chargers, call (605) 343-5630 to discuss your electrical project.',
+      'From commercial venue power distribution and main service upgrades to troubleshooting home circuits and installing EV chargers, call (605) 930-4504 to discuss your electrical project.',
     ],
     localContext: [
       'Sturgis businesses must be prepared for extreme surges in power demand during rally events, requiring robust 3-phase distribution, temporary power hookups, and heavy-duty disconnects. Year-round, residential homeowners in older Sturgis neighborhoods near downtown benefit from modernizing outdated 100A panels and cloth-insulated wiring.',
@@ -401,7 +401,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Residential rewiring, 200A service modernizations, commercial installations, and EV charging in Spearfish, South Dakota.',
     intro: [
       'Spearfish, known as the "Queen City," is a scenic hub in the Northern Black Hills home to Black Hills State University, outdoor enthusiasts, and a thriving local economy. Bucks Electric serves Spearfish residential homeowners, rental property managers, and commercial business owners.',
-      'Whether you are modernizing a historic residence near the university, upgrading your service panel, or outfitting a commercial building, call (605) 343-5630 to discuss your electrical project with our team.',
+      'Whether you are modernizing a historic residence near the university, upgrading your service panel, or outfitting a commercial building, call (605) 930-4504 to discuss your electrical project with our team.',
     ],
     localContext: [
       'The Spearfish housing market blends historic Queen City homes featuring older wiring configurations with brand-new residential subdivisions stretching along the valley floor. Older properties often require aluminum wiring remediation, ungrounded outlet replacement, and panel expansions.',
@@ -445,7 +445,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'Backup generator connections, timber cabin electrical repairs, 200A panel upgrades, and lighting in Custer, South Dakota.',
     intro: [
       'Custer is the historic county seat of Custer County, situated in the heart of the Southern Black Hills near Custer State Park and Crazy Horse Memorial. Bucks Electric delivers dependable residential and commercial electrical contracting to Custer property owners.',
-      'From installing whole-house generator transfer switches to modernizing older cabin wiring and repairing breaker faults, call (605) 343-5630 to speak directly with an experienced electrician.',
+      'From installing whole-house generator transfer switches to modernizing older cabin wiring and repairing breaker faults, call (605) 930-4504 to speak directly with an experienced electrician.',
     ],
     localContext: [
       'The rugged topography and forested acreage of Custer County mean rural properties can experience extended power outages when heavy winter snow brings down tree limbs on overhead utility lines. Having a code-compliant backup generator connection or automatic transfer switch is an essential safeguard for keeping well pumps and heating systems running.',

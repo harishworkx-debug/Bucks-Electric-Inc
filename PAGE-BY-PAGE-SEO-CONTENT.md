@@ -94,14 +94,14 @@ This document specifies the exact on-page SEO content, heading hierarchies (H1, 
 ### 2.5 Contact Us (`/contact-us`)
 * **Canonical URL**: `https://www.buckselectricsd.com/contact-us`
 * **SEO Title**: `Contact Electrician in Rapid City, SD | Bucks Electric`
-* **Meta Description**: `Need to contact an electrician in Rapid City, SD? Call Bucks Electric at (605) 343-5630 or visit 1720A Samco Rd for consultations, quotes, and emergency dispatch.`
+* **Meta Description**: `Need to contact an electrician in Rapid City, SD? Call Bucks Electric at (605) 930-4504 or visit 1720A Samco Rd for consultations, quotes, and emergency dispatch.`
 * **Primary H1**: `Contact Bucks Electric for Electrical Service`
 * **Heading Structure**:
   - `H2: Direct Phone Consultation`
   - `H2: Shop & Office Location`
   - `H2: Service Hours & Emergency Inquiries`
 * **Key Content Elements**:
-  - Direct click-to-call phone button: `(605) 343-5630`.
+  - Direct click-to-call phone button: `(605) 930-4504`.
   - Physical shop address: `1720A Samco Rd, Rapid City, SD 57702`.
   - Embedded Google Map directions link.
   - Operating hours: Monday - Friday 7:00 AM - 5:00 PM.

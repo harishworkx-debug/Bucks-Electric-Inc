@@ -11,12 +11,6 @@ import { ServicesPage } from '@/pages/ServicesPage';
 import { findServiceArea } from '@/data/areas';
 import { findService } from '@/data/services';
 import { PRIVACY_SECTIONS, TERMS_SECTIONS } from '@/data/legal';
-import { StandaloneLandingPage } from '@/standalone-landing/StandaloneLandingPage';
-
-export function isStandaloneRoute(pathname: string): boolean {
-  const clean = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
-  return clean === '/home-page' || clean === '/electrician-rapid-city';
-}
 
 const STATIC_ROUTES: Record<string, ReactNode> = {
   '/': <HomePage />,
@@ -24,8 +18,6 @@ const STATIC_ROUTES: Record<string, ReactNode> = {
   '/electrical-services': <ServicesPage />,
   '/service-areas': <ServiceAreasPage />,
   '/contact-us': <ContactPage />,
-  '/home-page': <StandaloneLandingPage />,
-  '/electrician-rapid-city': <StandaloneLandingPage />,
   '/privacy-policy': (
     <LegalPage
       title="Privacy Policy"
