@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { execSync } from 'node:child_process';
+import { build } from 'vite';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,11 +11,15 @@ const ssrDir = path.join(rootDir, 'dist-ssr');
 
 console.log('--- Starting Static Site Pre-rendering (SSG) ---');
 
-// 1. Build SSR bundle
+// 1. Build SSR bundle using Vite Programmatic Node API (Cross-Platform & In-Process)
 console.log('1. Building SSR bundle with Vite...');
-execSync('npx vite build --ssr src/entry-server.tsx --outDir dist-ssr', {
-  cwd: rootDir,
-  stdio: 'inherit',
+await build({
+  configFile: path.join(rootDir, 'vite.config.ts'),
+  build: {
+    ssr: 'src/entry-server.tsx',
+    outDir: 'dist-ssr',
+    emptyOutDir: true,
+  },
 });
 
 // 2. Import the compiled server entry
@@ -101,12 +105,25 @@ for (const route of routes) {
   }
 }
 
-// 5. Cleanup SSR directory
-console.log('3. Cleaning up temporary SSR artifacts...');
+// 5. Generate 404.html for Cloudflare Pages SPA fallback
+console.log('3. Pre-rendering 404.html for Cloudflare Pages fallback...');
+const { html: notFoundHtml } = render('/404');
+let notFoundPageHtml = template.replace(
+  /<title>.*?<\/title>/i,
+  '<title>Page Not Found | Bucks Electric</title>'
+);
+notFoundPageHtml = notFoundPageHtml.replace(
+  '<div id="root"></div>',
+  `<div id="root">${notFoundHtml}</div>`
+);
+fs.writeFileSync(path.join(distDir, '404.html'), notFoundPageHtml, 'utf-8');
+
+// 6. Cleanup SSR directory
+console.log('4. Cleaning up temporary SSR artifacts...');
 fs.rmSync(ssrDir, { recursive: true, force: true });
 
-console.log(`✓ Successfully pre-rendered all ${routes.length} pages into static HTML!`);
-console.log('✓ Googlebot & crawlers will now receive complete, readable HTML for every single page.');
+console.log(`✓ Successfully pre-rendered all ${routes.length} pages + 404.html into static HTML!`);
+console.log('✓ Cloudflare Pages & Googlebot will now receive complete, readable HTML for every single route.');
 
 function escapeHtml(str) {
   return str
@@ -115,4 +132,3 @@ function escapeHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 }
-

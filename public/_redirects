@@ -1,3 +1,8 @@
-http://buckselectricsd.com/* https://www.buckselectricsd.com/:splat 301!
-https://buckselectricsd.com/* https://www.buckselectricsd.com/:splat 301!
-/*    /index.html   200
+# Cloudflare Pages Redirects
+# Note: Host-level (apex-to-www) redirection is handled at the Cloudflare zone level via Redirect Rules.
+# Route shortcuts and legacy path redirects
+/services /electrical-services 301
+/locations /service-areas 301
+/about /about-us 301
+/contact /contact-us 301
+/landing / 302

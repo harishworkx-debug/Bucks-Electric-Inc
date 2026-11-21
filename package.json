@@ -10,7 +10,9 @@
     "prerender": "node scripts/prerender.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "pages:dev": "wrangler pages dev dist",
+    "pages:deploy": "wrangler pages deploy dist"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",

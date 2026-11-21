@@ -9,6 +9,7 @@ const routes = [
   '/contact-us',
   '/privacy-policy',
   '/terms-and-conditions',
+  '/home-page',
   '/electrical-repair-rapid-city-sd',
   '/electrical-installation-rapid-city-sd',
   '/electrical-panel-upgrade-rapid-city-sd',
@@ -65,8 +66,28 @@ for (const route of routes) {
   }
 }
 
+// Check Cloudflare 404 fallback
+console.log('\n--- Checking Cloudflare Deployment Assets ---');
+const requiredCloudflareFiles = [
+  'dist/404.html',
+  'dist/_redirects',
+  'dist/_headers',
+  'dist/sitemap.xml',
+  'dist/robots.txt',
+];
+
+for (const file of requiredCloudflareFiles) {
+  if (fs.existsSync(file)) {
+    const size = fs.statSync(file).size;
+    console.log(`✅ [${file}] (${size} bytes)`);
+  } else {
+    console.error(`❌ MISSING CLOUDFLARE FILE: ${file}`);
+    errorCount++;
+  }
+}
+
 if (errorCount === 0) {
-  console.log(`\n🎉 All ${routes.length} pages verified with 100% complete titles, H1s, meta descriptions, canonicals, and raw HTML bodies!`);
+  console.log(`\n🎉 All ${routes.length} pages + Cloudflare deployment assets verified successfully!`);
 } else {
   console.error(`\n❌ Found ${errorCount} errors or warnings.`);
   process.exit(1);
